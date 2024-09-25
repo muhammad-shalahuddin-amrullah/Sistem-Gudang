@@ -18,6 +18,10 @@ Sistem Gudang is a REST API application built using Laravel 10, designed to mana
 
 ## Installation
 
+Clone this repository
+```bash
+git clone https://github.com/Kocheng-Angkasa/Sistem-Gudang.git
+```
 Enter the project directory
 ```bash
 cd sistem-gudang
