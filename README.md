@@ -26,6 +26,10 @@ Enter the project directory
 ```bash
 cd sistem-gudang
 ```
+Enter the project directory
+```bash
+composer install
+```
 Run Docker Compose
 ```bash
 docker-compose up -d
