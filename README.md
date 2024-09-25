@@ -18,19 +18,29 @@ Sistem Gudang is a REST API application built using Laravel 10, designed to mana
 
 ## Installation
 
-Clone this repository
+- Clone this repository
 ```bash
 git clone https://github.com/Kocheng-Angkasa/Sistem-Gudang.git
 ```
-Enter the project directory
+- Enter the project directory
 ```bash
 cd sistem-gudang
 ```
-Run composer install
+- Run composer install
 ```bash
 composer install
 ```
-Run Docker Compose
+- Copy the .env.example file into .env
+- Open the .env file, find the DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD lines, then fill them with values as below:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=gudang
+DB_USERNAME=root
+DB_PASSWORD=password
+```
+- Run Docker Compose
 ```bash
 docker-compose up -d
 ```
