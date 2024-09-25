@@ -26,7 +26,7 @@ Enter the project directory
 ```bash
 cd sistem-gudang
 ```
-Enter the project directory
+Run composer install
 ```bash
 composer install
 ```
