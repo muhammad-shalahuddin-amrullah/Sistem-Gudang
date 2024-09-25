@@ -34,7 +34,7 @@ Wait for the installation process to complete.
 After the deployment is complete, if you are using Windows:
 
 - Open Docker Desktop.
-- Navigate to the Containers tab and find the container with the name containermainname=sistemgudang.
+- Navigate to the Containers tab and find the container with the name sistem-gudang.
 - There will be 3 containers running, namely: sistem-gudang (PHP Laravel run on 8000):, database (MySQL Database), phpmyadmin (phpMyAdmin run on 8081)
 
 To open the web application:
