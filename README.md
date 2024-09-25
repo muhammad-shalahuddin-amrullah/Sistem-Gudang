@@ -73,6 +73,7 @@ Before attempting to run API requests, you must run a database migration. To do 
 ```bash
 php artisan migrate
 ```
+- if there is a question “The database ‘gudang’ does not exist on the ‘mysql’ connection,  Would you like to create it?", Select yes.
 - After the migration is complete, you can try running the API request that has been provided.
 
 ## Testing the API Request
