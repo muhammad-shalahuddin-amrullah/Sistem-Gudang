@@ -1,0 +1,48 @@
+services:
+  main:
+    container_name: 'Sistem-Gudang'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'php artisan serve --host=0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+
+  db:
+    platform: linux/x86_64
+    image: mysql:8.0
+    container_name: Database
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_USER: "myuser"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_USER_HOST: "%"  # Add this line
+    volumes:
+      - db:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: PhpMyAdmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+
+
+networks:
+  laravel-exa:
+    driver: bridge
+
+volumes:
+  db:
+    driver: local

@@ -1,0 +1,39 @@
+SELECT 
+  i.item_name, 
+  i.item_code, 
+  mt.mutation_type_name, 
+  im.qty, 
+  m.date, 
+  u.name AS user_name, 
+  l.location_name AS location_name
+FROM 
+  item_mutations im
+  JOIN mutations m ON im.mutation_id = m.id
+  JOIN items i ON im.item_id = i.id
+  JOIN mutation_types mt ON m.mutation_type_id = mt.id
+  JOIN users u ON m.user_id = u.id
+  JOIN locations l ON i.location_id = l.id
+ORDER BY 
+  i.item_name, 
+  m.date DESC;
+
+  SELECT 
+  i.item_name, 
+  i.item_code, 
+  mt.mutation_type_name, 
+  im.qty, 
+  m.date, 
+  u.name AS user_name, 
+  l.location_name AS location_name
+FROM 
+  item_mutations im
+  JOIN mutations m ON im.mutation_id = m.id
+  JOIN items i ON im.item_id = i.id
+  JOIN mutation_types mt ON m.mutation_type_id = mt.id
+  JOIN users u ON m.user_id = u.id
+  JOIN locations l ON i.location_id = l.id
+WHERE 
+  i.item_name LIKE '%Nike%'
+ORDER BY 
+  i.item_name, 
+  m.date DESC;

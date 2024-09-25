@@ -1,0 +1,39 @@
+SELECT 
+  u.name AS user_name, 
+  u.email, 
+  i.item_name, 
+  mt.mutation_type_name, 
+  im.qty, 
+  m.date, 
+  l.location_name AS location_name
+FROM 
+  mutations m
+  JOIN item_mutations im ON m.id = im.mutation_id
+  JOIN items i ON im.item_id = i.id
+  JOIN mutation_types mt ON m.mutation_type_id = mt.id
+  JOIN locations l ON i.location_id = l.id
+  JOIN users u ON m.user_id = u.id
+ORDER BY 
+  u.name, 
+  m.date DESC;
+
+
+  SELECT 
+  u.name AS user_name, 
+  u.email, 
+  i.item_name, 
+  mt.mutation_type_name, 
+  im.qty, 
+  m.date, 
+  l.location_name AS location_name
+FROM 
+  mutations m
+  JOIN item_mutations im ON m.id = im.mutation_id
+  JOIN items i ON im.item_id = i.id
+  JOIN mutation_types mt ON m.mutation_type_id = mt.id
+  JOIN locations l ON i.location_id = l.id
+  JOIN users u ON m.user_id = u.id
+WHERE 
+  u.name LIKE '%Amrullah%'
+ORDER BY 
+  m.date DESC;
