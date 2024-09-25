@@ -56,7 +56,7 @@ To open the web application:
 - If the Laravel page appears, the deployment process is successful.
 
 To open the phpMyAdmin:
-- open a browser and visit localhost:8081.
+- Click the port written on phpMyAdmin container (port 8081).
 - On the phpMyAdmin login page, enter the following credentials:
 Enter the project directory
 ```bash
