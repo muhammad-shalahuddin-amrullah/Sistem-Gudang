@@ -59,8 +59,8 @@ php artisan migrate
 
 ## Testing the API Request
 
-- To test API requests, use Postman or a similar tool. You can follow further guidance in the Postman documentation provided:
+To test API requests, use Postman or a similar tool. You can follow further guidance in the Postman documentation provided:
  
 [Postman API Documentation.](https://documenter.getpostman.com/view/23044633/2sAXqwYzcA)
 
-- Make sure you have run the migration command before trying the API.
+Make sure you have run the migration command before trying the API.
