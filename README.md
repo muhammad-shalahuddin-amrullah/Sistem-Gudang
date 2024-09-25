@@ -63,4 +63,4 @@ php artisan migrate
  
 [Postman API Documentation.](https://documenter.getpostman.com/view/23044633/2sAXqwYzcA)
 
-= Make sure you have run the migration command before trying the API.
+- Make sure you have run the migration command before trying the API.
